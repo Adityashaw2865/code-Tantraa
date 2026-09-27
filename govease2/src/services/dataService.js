@@ -73,13 +73,6 @@ export async function fetchMyWorkspace(token) {
     return {
         applications: applications?.applications?.map((a) => ({
             ...a,
-            // The backend populates businessId with the business document
-            // (including businessName) - grab that name onto the
-            // application itself before flattening businessId down to a
-            // plain string id, otherwise it's lost and any code that needs
-            // the business name (e.g. scheduling an inspection) has no way
-            // to get it for roles like officer/inspector that don't load
-            // the full `businesses` list.
             businessName: (a.businessId && typeof a.businessId === 'object') ? a.businessId.businessName : undefined,
             businessId: flat(a.businessId), approvalTypeId: flat(a.approvalTypeId), departmentId: flat(a.departmentId)
         })) ?? null,
@@ -291,6 +284,23 @@ export async function createPaymentAPI(token, businessId, approvalTypeIds, metho
     if (!res.ok)
         throw new Error(data.error || `Payment failed (${res.status})`);
     return data.payment;
+}
+// --- Survey insights (public, no auth needed - anyone can view or submit) ---
+export async function fetchSurveySummary() {
+    const res = await fetch(`${API}/api/surveys/summary`);
+    if (!res.ok)
+        throw new Error('Could not load survey insights');
+    return res.json();
+}
+export async function submitSurveyResponse(payload) {
+    const res = await fetch(`${API}/api/surveys`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok)
+        throw new Error(data.error || `Could not submit survey (${res.status})`);
+    return data.response;
 }
 export async function downloadPaymentReceipt(token, paymentId, grnNumber) {
     const res = await fetch(`${API}/api/payments/${paymentId}/receipt`, { headers: { Authorization: `Bearer ${token}` } });

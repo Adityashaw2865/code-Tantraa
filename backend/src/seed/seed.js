@@ -4,6 +4,7 @@ const { connectDB } = require('../config/db');
 const Department = require('../models/Department');
 const ApprovalType = require('../models/ApprovalType');
 const User = require('../models/User');
+const SurveyResponse = require('../models/SurveyResponse');
 
 // All demo/reference data now lives in ./data/*.json instead of being
 // hardcoded inline here — edit those files (or point SEED_DATA_DIR at your
@@ -13,6 +14,7 @@ const DATA_DIR = process.env.SEED_DATA_DIR || require('path').join(__dirname, 'd
 const DEPARTMENTS = require(require('path').join(DATA_DIR, 'departments.json'));
 const APPROVAL_TYPES_BY_DEPT_CODE = require(require('path').join(DATA_DIR, 'approvalTypes.json'));
 const DEMO_USERS = require(require('path').join(DATA_DIR, 'demoUsers.json'));
+const SURVEY_RESPONSES = require(require('path').join(DATA_DIR, 'surveyResponses.json'));
 
 // Demo password is configurable via env instead of being hardcoded.
 const DEMO_PASSWORD = process.env.SEED_DEMO_PASSWORD || 'Passw0rd!123';
@@ -51,6 +53,17 @@ async function seed() {
     });
     await user.setPassword(DEMO_PASSWORD);
     await user.save();
+  }
+
+  // Baseline survey data (the "old survey" / secondary-research dataset) -
+  // only re-seeded if empty, so re-running seed doesn't wipe real live
+  // responses collected from the public survey form.
+  const existingBaseline = await SurveyResponse.countDocuments({ source: 'baseline' });
+  if (existingBaseline === 0) {
+    console.log('[seed] inserting baseline survey responses...');
+    await SurveyResponse.insertMany(SURVEY_RESPONSES.map((r) => ({ ...r, source: 'baseline' })));
+  } else {
+    console.log(`[seed] baseline survey responses already present (${existingBaseline}), skipping.`);
   }
 
   console.log('\n[seed] done. Demo logins (password for all: ' + DEMO_PASSWORD + '):');

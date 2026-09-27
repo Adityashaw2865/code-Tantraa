@@ -25,6 +25,7 @@ const aiRoutes = require('./routes/ai.routes');
 const jobRoutes = require('./routes/jobs.routes');
 const analyticsRoutes = require('./routes/analytics.routes');
 const paymentRoutes = require('./routes/payments.routes');
+const surveyRoutes = require('./routes/surveys.routes');
 
 const sentry = require('./config/sentry');
 
@@ -89,6 +90,7 @@ app.use('/api/ai', aiRoutes);
 app.use('/api/jobs', jobRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/payments', paymentRoutes);
+app.use('/api/surveys', surveyRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

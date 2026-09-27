@@ -7,6 +7,7 @@ import { HowItWorksPage } from './components/landing/HowItWorksPage';
 import { FeaturesPage } from './components/landing/FeaturesPage';
 import { ApprovalsDirectoryPage } from './components/landing/ApprovalsDirectoryPage';
 import { AboutPage } from './components/landing/AboutPage';
+import { SurveyInsightsPage } from './components/landing/SurveyInsightsPage';
 import { ProjectWizard } from './components/onboarding/ProjectWizard';
 import { AuthModal } from './components/auth/AuthModal';
 // Role dashboards and less-frequently-opened modals are code-split: a
@@ -70,6 +71,8 @@ const MainAppContent = () => {
                 setWizardPrefill({ sector, employees });
                 setIsOnboardingOpen(true);
             }} onOpenAssistant={() => setIsAssistantOpen(true)}/>)}
+
+        {activeNavTab === 'insights' && <SurveyInsightsPage />}
 
         {activeNavTab === 'about' && (<AboutPage onOpenAssistant={() => setIsAssistantOpen(true)}/>)}
 

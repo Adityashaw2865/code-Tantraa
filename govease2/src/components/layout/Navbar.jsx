@@ -215,6 +215,7 @@ export const Navbar = ({ onOpenAssistant, onOpenTrackModal, onStartOnboarding, a
             { id: 'directory', label: 'Approvals Directory' },
             { id: 'how-it-works', label: 'How It Works' },
             { id: 'features', label: 'Features' },
+            { id: 'insights', label: 'Survey Insights' },
             { id: 'about', label: 'About' }
         ].map(item => (<button key={item.id} onClick={() => setActiveNavTab(item.id)} className={`transition-colors cursor-pointer h-full border-b-2 ${activeNavTab === item.id ? 'border-blue-900 text-blue-900 font-semibold' : 'border-transparent hover:text-slate-900'}`}>
             {item.label}
