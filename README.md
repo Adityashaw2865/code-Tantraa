@@ -1,6 +1,6 @@
 # VyaparSetu
 
-**Single-window business approval & compliance platform** — built for Smart India Hackathon 2026 (Problem Statement SIH26130, Maharashtra Single Window System).
+**Single-window business approval & compliance platform** — built for Smart India Hackathon 2026 (Problem tement SIH26130, Maharashtra Single Window System).
 
 VyaparSetu lets a business owner apply for every government approval/licence they need (trade licence, fire NOC, pollution clearance, etc.) through one dashboard, track status in real time, and lets government officers, inspectors, and admins process those applications — all backed by a real database, real auth, and a server-side rules/risk engine instead of hardcoded logic.
 
