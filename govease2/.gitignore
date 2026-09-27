@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+.env
+!.env.example
+!.env.docker.example
+coverage/
+*.tgz
+.vscode/
+.idea/

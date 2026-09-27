@@ -1,0 +1,6 @@
+[
+  { "name": "Demo Applicant", "email": "applicant@vyaparsetu.demo", "mobile": "9800000001", "role": "applicant", "state": "Maharashtra", "district": "Pune" },
+  { "name": "Demo Officer", "email": "officer@vyaparsetu.demo", "mobile": "9800000002", "role": "officer", "deptCode": "DISH", "designation": "Joint Director (DISH Maharashtra)" },
+  { "name": "Demo Inspector", "email": "inspector@vyaparsetu.demo", "mobile": "9800000003", "role": "inspector", "deptCode": "MFES", "designation": "Divisional Fire Inspector (Pune Zone)" },
+  { "name": "Demo Admin", "email": "admin@vyaparsetu.demo", "mobile": "9800000004", "role": "admin", "designation": "State Single Window Admin (MAITRI / MSInS)" }
+]

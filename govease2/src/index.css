@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* ===== GovEase Design Tokens ===== */
+    /* Brand */
+    --gov-navy: #0B2447;
+    --gov-navy-light: #14335E;
+    --gov-accent: #2563EB;
+
+    /* Role identity colors — one dedicated color per role, used ONLY for
+       dashboard header banners and the active nav highlight of that role.
+       Do not introduce new shades elsewhere. */
+    --role-applicant-from: #1E1B4B; /* indigo-950 */
+    --role-applicant-to:   #312E81; /* indigo-900 */
+    --role-officer-from:   #052E2B; /* teal-950   */
+    --role-officer-to:     #064E3B; /* emerald-900*/
+    --role-inspector-from: #451A03; /* amber-950  */
+    --role-inspector-to:   #78350F; /* amber-900  */
+    --role-admin-from:     #0F172A; /* slate-900  */
+    --role-admin-to:       #1E293B; /* slate-800  */
+
+    /* Status colors — the ONLY greens/ambers/reds/blues allowed for status
+       badges/chips anywhere in the app. */
+    --status-success-bg: #DCFCE7; --status-success-text: #15803D; --status-success-border: #BBF7D0;
+    --status-warning-bg: #FEF3C7; --status-warning-text: #B45309; --status-warning-border: #FDE68A;
+    --status-danger-bg:  #FEE2E2; --status-danger-text:  #B91C1C; --status-danger-border: #FECACA;
+    --status-info-bg:    #DBEAFE; --status-info-text:    #1D4ED8; --status-info-border: #BFDBFE;
+    --status-neutral-bg: #F1F5F9; --status-neutral-text: #475569; --status-neutral-border: #E2E8F0;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #0f172a;
+    background-color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom scrollbars for data tables and logs */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

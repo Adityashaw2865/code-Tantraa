@@ -1,0 +1,74 @@
+[
+  {
+    "shortCode": "DISH",
+    "name": "Directorate of Industrial Safety & Health (DISH)",
+    "jurisdiction": "Statewide Industrial Safety, Factories Act 1948 & Maharashtra Rules 1963",
+    "nodalOfficer": "Dr. Vijay Patil, IAS",
+    "contactEmail": "dish.compliance@maharashtra.gov.in",
+    "contactPhone": "022-2657-3921",
+    "iconName": "Building2"
+  },
+  {
+    "shortCode": "MPCB",
+    "name": "Maharashtra Pollution Control Board (MPCB)",
+    "jurisdiction": "Environmental Sanctions (Consent to Establish CTE / Consent to Operate CTO)",
+    "nodalOfficer": "Smt. Meenakshi Joshi, IAS",
+    "contactEmail": "consent.nodal@mpcb.gov.in",
+    "contactPhone": "022-2401-0437",
+    "iconName": "Leaf"
+  },
+  {
+    "shortCode": "MFES",
+    "name": "Maharashtra Fire & Life Safety Directorate",
+    "jurisdiction": "Life Safety, Hydrant Certification & Fire NOC (Act 2006)",
+    "nodalOfficer": "Er. Sachin Deshmukh",
+    "contactEmail": "firenoc.cell@maharashtra.gov.in",
+    "contactPhone": "022-2262-1165",
+    "iconName": "Flame"
+  },
+  {
+    "shortCode": "MIDC",
+    "name": "Maharashtra Industrial Development Corp (MIDC)",
+    "jurisdiction": "Industrial Land Allotment, Building Plan Sanction & Water Works",
+    "nodalOfficer": "Shri Rajesh Ghadge",
+    "contactEmail": "planning@midcindia.org",
+    "contactPhone": "022-2687-0052",
+    "iconName": "MapPin"
+  },
+  {
+    "shortCode": "DoL",
+    "name": "Office of Labour Commissioner Maharashtra",
+    "jurisdiction": "Contract Labour (R&A) Act, Shops & Establishments, Mathadi Boards",
+    "nodalOfficer": "Shri Pravin More",
+    "contactEmail": "labour-compliance@maharashtra.gov.in",
+    "contactPhone": "022-2202-4100",
+    "iconName": "Users"
+  },
+  {
+    "shortCode": "FDA-MH",
+    "name": "Food and Drug Administration (FDA Maharashtra)",
+    "jurisdiction": "State / Central Food Manufacturing Licences & Hygiene Audits",
+    "nodalOfficer": "Dr. Abhay Deshpande",
+    "contactEmail": "fssai.licensing@fda.maharashtra.gov.in",
+    "contactPhone": "022-2659-2402",
+    "iconName": "ShieldCheck"
+  },
+  {
+    "shortCode": "MSEDCL",
+    "name": "Maharashtra State Electricity Distribution (MSEDCL / Mahavitaran)",
+    "jurisdiction": "HT / LT Industrial Power Substation Load Feasibility & Energization",
+    "nodalOfficer": "Er. Tanmay Shinde",
+    "contactEmail": "industrial.power@mahadiscom.in",
+    "contactPhone": "022-2647-4211",
+    "iconName": "Zap"
+  },
+  {
+    "shortCode": "ULB",
+    "name": "Urban Local Bodies / Pimpri Chinchwad & Pune Municipal Corp",
+    "jurisdiction": "Trade Licence, Solid Waste Management & Municipal NOC",
+    "nodalOfficer": "Sri Nilesh Shinde",
+    "contactEmail": "licensing@pcmcindia.gov.in",
+    "contactPhone": "020-2742-5511",
+    "iconName": "Landmark"
+  }
+]

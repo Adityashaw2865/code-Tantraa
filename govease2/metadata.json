@@ -1,0 +1,6 @@
+{
+  "name": "GovEase",
+  "description": "Intelligent Business Approval & Compliance Management Platform for single-window clearances, regulatory discovery, inspections, and SLA tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
