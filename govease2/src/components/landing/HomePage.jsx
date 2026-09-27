@@ -5,7 +5,7 @@ import avatarOfficer from '../../assets/images/avatar_officer_1790107797293.jpg'
 
 export const HomePage = ({ onStartOnboarding, onOpenTrackModal, setActiveNavTab, onSearchDirectory }) => {
     const [heroSearch, setHeroSearch] = useState('');
-    const popularClearances = ['MIDC Land Allotment', 'MPCB Consent', 'Fire NOC', 'Factory Licence', 'HT Power Sanction'];
+    const popularClearances = ['MIDC Land Allotment', 'MPCB Consent', 'Fire NOC', 'Factory Licence', 'HT Power Sanction', 'Labour Licence'];
     const departments = [
         { icon: Landmark, label: 'Municipal' },
         { icon: Flame, label: 'Fire Services' },
